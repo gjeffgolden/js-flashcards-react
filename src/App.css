@@ -4,6 +4,17 @@
   width: auto;
   background-color: white;
   display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  text-align: center;
+  height: 50%;
+  width: auto;
+  background-color: white;
+  display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;

@@ -6,9 +6,11 @@ const CardContainer = ({ flipCard, shownCards, currentCardIndex }) => {
 
     const displayCard = () => {
         let currentCard = shownCards[currentCardIndex]
-        return(
-            <Card term={currentCard.term} />
-        )
+        if (flipCard === true) {
+            return <Card term={currentCard.term} />
+        } else {
+            return <Card term={currentCard.definition} />
+        }
     }
 
     return(

@@ -13,8 +13,8 @@ function App() {
   const [currentCardIndex, setCurrentCardIndex] = useState(0)
 
   const nextCard = () => {
-      let nextIndex = currentCardIndex + 1 === shownCards.length ? 0 : currentCardIndex + 1
-      setCurrentCardIndex(nextIndex)
+    let nextIndex = currentCardIndex + 1 === shownCards.length ? 0 : currentCardIndex + 1
+    setCurrentCardIndex(nextIndex)
   }
 
   const previousCard = () => {
@@ -28,10 +28,12 @@ function App() {
 
   return (
     <div className="App">
-      <ArrowBackIosIcon fontSize="large" onClick={previousCard} />
-      <CardContainer flipCard={flipCard} shownCards={shownCards} currentCardIndex={currentCardIndex} />
-      <ArrowForwardIosIcon fontSize="large" onClick={nextCard}/>
-      {/* <button className="flip-button" onMouseEnter={handleFlip} onMouseLeave={handleFlip}>Click to Flip</button> */}
+      <div className="main-container">
+        <ArrowBackIosIcon fontSize="large" onClick={previousCard} />
+        <CardContainer flipCard={flipCard} shownCards={shownCards} currentCardIndex={currentCardIndex} />
+        <ArrowForwardIosIcon fontSize="large" onClick={nextCard}/>
+      </div>
+      <button className="flip-button" onMouseEnter={handleFlip} onMouseLeave={handleFlip}>Click to Flip</button>
     </div>
   );
 }
