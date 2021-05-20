@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Card from '../components/Card'
-import CardBack from '../components/CardBack'
 
 const CardContainer = ({ flipCard, shownCards, currentCardIndex }) => {
 
