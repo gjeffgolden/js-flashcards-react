@@ -3,17 +3,27 @@ import Card from '../components/Card'
 
 const CardContainer = ({ flipCard, shownCards, currentCardIndex }) => {
 
-    const displayCard = () => {
-        let currentCard = shownCards[currentCardIndex]
-        if (flipCard === true) {
-            return <Card term={currentCard.term} />
-        } else {
-            return <Card term={currentCard.definition} />
+    const assignClass = () => {
+        if (shownCards[currentCardIndex].cardType === "Key Term") {
+            return "term-card-container"
+        } else if (shownCards[currentCardIndex].cardType === "Method") {
+            return "method-card-container"
         }
     }
 
+    const displayCard = () => {
+        let currentCard = shownCards[currentCardIndex]
+        if (flipCard === true) {
+            return <Card cardType={currentCard.cardType} content={currentCard.term} />
+        } else {
+            return <Card cardType={currentCard.cardType} content={currentCard.definition} example={currentCard.example} />
+        }
+    }
+
+    console.log(shownCards[currentCardIndex].cardType)
+
     return(
-        <div className="card-container">
+        <div className={assignClass()}>
             {displayCard()}
         </div>
     )
