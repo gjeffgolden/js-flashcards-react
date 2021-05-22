@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 
 //icons
@@ -17,23 +17,27 @@ import htmlElements from './assets/HTMLElements'
 function App() {
 
   const [flipCard, setFlipCard] = useState(true)
-  const [shownCards, setShownCards] = useState([...keyTerms, ...prototypeMethods, ...htmlElements])
+  const [allCards, setAllCards] = useState([...keyTerms, ...prototypeMethods, ...htmlElements])
+  const [shownCards, setShownCards] = useState([])
   const [currentCardIndex, setCurrentCardIndex] = useState(0)
 
-  const allCards = () => {
-    setShownCards([[...keyTerms, ...prototypeMethods, ...htmlElements]])
+  const shuffledCards = () => {
+    setShownCards(allCards)
   }
 
   const methodCards = () => {
-    setShownCards([...prototypeMethods])
+    let filtered = allCards.filter(card => card.cardType === "Method")
+    setShownCards(filtered)
   }
 
   const termCards = () => {
-    setShownCards([...keyTerms])
+    let filtered = allCards.filter(card => card.cardType === "Key Term")
+    setShownCards(filtered)
   }
 
   const htmlCards = () => {
-    setShownCards([...htmlElements])
+    let filtered = allCards.filter(card => card.cardType === "HTML")
+    setShownCards(filtered)
   }
 
   const nextCard = () => {
@@ -52,7 +56,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header allCards={allCards} />
+      <Header allCards={shuffledCards} methodCards={methodCards} htmlCards={htmlCards} termCards={termCards} />
       <div className="main-container">
         <ArrowBackIosIcon className="arrow-button" fontSize="large" onClick={previousCard} />
         <CardContainer flipCard={flipCard} shownCards={shownCards} currentCardIndex={currentCardIndex} />
