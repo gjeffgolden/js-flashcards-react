@@ -5,8 +5,9 @@ import './App.css';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
-//containers
+//containers and components
 import CardContainer from './containers/CardContainer'
+import Header from  './components/Header'
 
 //card object arrays
 import keyTerms from './assets/KeyTerms'
@@ -18,6 +19,22 @@ function App() {
   const [flipCard, setFlipCard] = useState(true)
   const [shownCards, setShownCards] = useState([...keyTerms, ...prototypeMethods, ...htmlElements])
   const [currentCardIndex, setCurrentCardIndex] = useState(0)
+
+  const allCards = () => {
+    setShownCards([[...keyTerms, ...prototypeMethods, ...htmlElements]])
+  }
+
+  const methodCards = () => {
+    setShownCards([...prototypeMethods])
+  }
+
+  const termCards = () => {
+    setShownCards([...keyTerms])
+  }
+
+  const htmlCards = () => {
+    setShownCards([...htmlElements])
+  }
 
   const nextCard = () => {
     let nextIndex = currentCardIndex + 1 === shownCards.length ? 0 : currentCardIndex + 1
@@ -35,6 +52,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header allCards={allCards} />
       <div className="main-container">
         <ArrowBackIosIcon className="arrow-button" fontSize="large" onClick={previousCard} />
         <CardContainer flipCard={flipCard} shownCards={shownCards} currentCardIndex={currentCardIndex} />
