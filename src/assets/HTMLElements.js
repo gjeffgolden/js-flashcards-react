@@ -1,4 +1,4 @@
-const HTMLElements = [
+const htmlElements = [
     {
         cardType: "HTML",
         term: "<section>",
@@ -25,4 +25,4 @@ const HTMLElements = [
     },
 ]
 
-export default HTMLElements;
+export default htmlElements;

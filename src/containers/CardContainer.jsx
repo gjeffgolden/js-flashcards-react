@@ -3,11 +3,14 @@ import Card from '../components/Card'
 
 const CardContainer = ({ flipCard, shownCards, currentCardIndex }) => {
 
+    //try a switch statement when refactoring
     const assignClass = () => {
         if (shownCards[currentCardIndex].cardType === "Key Term") {
             return "term-card-container"
         } else if (shownCards[currentCardIndex].cardType === "Method") {
             return "method-card-container"
+        } else if (shownCards[currentCardIndex].cardType === "HTML") {
+            return "html-card-container"
         }
     }
 
@@ -19,8 +22,6 @@ const CardContainer = ({ flipCard, shownCards, currentCardIndex }) => {
             return <Card cardType={currentCard.cardType} content={currentCard.definition} example={currentCard.example} />
         }
     }
-
-    console.log(shownCards[currentCardIndex].cardType)
 
     return(
         <div className={assignClass()}>
