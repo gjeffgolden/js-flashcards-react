@@ -32,9 +32,9 @@ const CardContainer = ({ flipCard, shownCards, currentCardIndex }) => {
     }
 
     return(
-        <div className={assignClass()}>
+        <section className={assignClass()}>
             {displayCard()}
-        </div>
+        </section>
     )
 
 }

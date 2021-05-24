@@ -58,6 +58,10 @@
   width: 90%;
 }
 
+.card h1 {
+  font-size: 3rem;
+}
+
 .flip-button {
   margin-top: 1rem;
   background-color: white;

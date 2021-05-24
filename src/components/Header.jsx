@@ -10,10 +10,10 @@ export default function Header({ allCards, htmlCards, methodCards, termCards }) 
             case "JavaScript Key Terms":
                 termCards()
                 break;
-            case "Methods":
+            case "JavaScript Methods":
                 methodCards()
                 break;
-            case "HTML Elements":
+            case "Semantic HTML":
                 htmlCards()
                 break;
             default:
@@ -25,10 +25,10 @@ export default function Header({ allCards, htmlCards, methodCards, termCards }) 
     return (
         <header>
             <nav>
-                <button onClick={handleClick}> All Cards (Shuffled)</button>
-                <button onClick={handleClick}> JavaScript Key Terms</button>
-                <button onClick={handleClick}>Methods</button>
-                <button onClick={handleClick}>HTML Elements</button>
+                <button onClick={handleClick}>All Cards (Shuffled)</button>
+                <button onClick={handleClick}>JavaScript Key Terms</button>
+                <button onClick={handleClick}>JavaScript Methods</button>
+                <button onClick={handleClick}>Semantic HTML</button>
             </nav>
         </header>
     )

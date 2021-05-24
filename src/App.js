@@ -63,18 +63,18 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <main className="App">
       <Header allCards={shuffledCards} methodCards={methodCards} htmlCards={htmlCards} termCards={termCards} />
       <div className="main-container">
         <ArrowBackIosIcon className="arrow-button" fontSize="large" onClick={previousCard} />
         <CardContainer flipCard={flipCard} shownCards={shownCards} currentCardIndex={currentCardIndex} />
-        <ArrowForwardIosIcon className="arrow-button" fontSize="large" onClick={nextCard}/>
+        <ArrowForwardIosIcon className="arrow-button" fontSize="large" onClick={nextCard} />
       </div>
-      <div className="flip-button" onMouseEnter={handleFlip} onMouseLeave={handleFlip}>
+      <figure className="flip-button" onMouseEnter={handleFlip} onMouseLeave={handleFlip}>
         <FlipCameraAndroidIcon fontSize="large" />
-        <p>HOVER TO FLIP</p>
-      </div>
-    </div>
+        <figcaption>HOVER TO FLIP</figcaption>
+      </figure>
+    </main>
   );
 }
 
