@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './App.css';
 
 //icons
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
+import FlipCameraAndroidIcon from '@material-ui/icons/FlipCameraAndroid'
 
 //containers and components
 import CardContainer from './containers/CardContainer'
@@ -17,28 +18,35 @@ import htmlElements from './assets/HTMLElements'
 function App() {
 
   const [flipCard, setFlipCard] = useState(true)
-  const [allCards, setAllCards] = useState([...keyTerms, ...prototypeMethods, ...htmlElements])
   const [shownCards, setShownCards] = useState([])
   const [currentCardIndex, setCurrentCardIndex] = useState(0)
-
+  
+  const allCards = [...keyTerms, ...prototypeMethods, ...htmlElements]
+  
+  //candidate for refactoring
   const shuffledCards = () => {
+    setCurrentCardIndex(0)
     setShownCards(allCards)
   }
 
   const methodCards = () => {
     let filtered = allCards.filter(card => card.cardType === "Method")
+    setCurrentCardIndex(0)
     setShownCards(filtered)
   }
 
   const termCards = () => {
     let filtered = allCards.filter(card => card.cardType === "Key Term")
+    setCurrentCardIndex(0)
     setShownCards(filtered)
   }
 
   const htmlCards = () => {
     let filtered = allCards.filter(card => card.cardType === "HTML")
+    setCurrentCardIndex(0)
     setShownCards(filtered)
   }
+  //end candidate for refactoring
 
   const nextCard = () => {
     let nextIndex = currentCardIndex + 1 === shownCards.length ? 0 : currentCardIndex + 1
@@ -62,7 +70,10 @@ function App() {
         <CardContainer flipCard={flipCard} shownCards={shownCards} currentCardIndex={currentCardIndex} />
         <ArrowForwardIosIcon className="arrow-button" fontSize="large" onClick={nextCard}/>
       </div>
-      <button className="flip-button" onMouseEnter={handleFlip} onMouseLeave={handleFlip}>HOVER TO FLIP</button>
+      <div className="flip-button" onMouseEnter={handleFlip} onMouseLeave={handleFlip}>
+        <FlipCameraAndroidIcon fontSize="large" />
+        <p>HOVER TO FLIP</p>
+      </div>
     </div>
   );
 }
