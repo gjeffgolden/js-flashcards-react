@@ -53,6 +53,24 @@ const prototypeMethods = [
         definition: "ARRAY: Returns the value of the first element in an array that matches a certain condition. If nothing meets the condition, returns undefined.",
         example: "[1, 2, 3, 4].find(number => number === 3) => 3"
     },
+    {
+        cardType: "Method",
+        term: ".findIndex()",
+        definition: "ARRAY: Returns the index of the first element in an array that matches a certain condition. If nothing meets the condition, returns -1.",
+        example: "[1, 2, 3, 4].findIndex(number => number === 3) => 2"
+    },
+    {
+        cardType: "Method",
+        term: ".flat()",
+        definition: "ARRAY: Creates a new array of two concatenated arrays, with an optional argument to specify array depth.",
+        example: "[1, 2, 3, [4, 5]].flat() => [1, 2, 3, 4, 5]"
+    },
+    {
+        cardType: "Method",
+        term: ".flatMap()",
+        definition: "ARRAY: Identical to calling .map() followed by .flat(). Returns a new one-dimensional array with mapped values.",
+        example: "[1, 2, 3, [4, 5]].flatMap(number => number * 2) => [2, 4, 6, 8, 10]"
+    },
 ]
 
 export default prototypeMethods;
