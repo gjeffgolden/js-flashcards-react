@@ -16,7 +16,13 @@ const keyTerms = [
         term: "IIFE",
         definition: "Immediately Invoked Function Expression.",
         example: "(() => console.log('Hi'))();"
-    }
+    },
+    {
+        cardType: "Key Term",
+        term: "Template Literal",
+        definition: "Strings denoted with backticks (``) that allow for embedded expressions and multi-line strings.",
+        example: "`My name is ${name}`"
+    },
 ]
 
     export default keyTerms;
