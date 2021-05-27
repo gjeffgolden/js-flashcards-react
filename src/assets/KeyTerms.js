@@ -41,6 +41,18 @@ const keyTerms = [
         definition: "A value that is considered true in a boolean context.",
         example: "All values in JavaScript are truthy unless defined as falsy, such as null and NaN."
     },
+    {
+        cardType: "Key Term",
+        term: "Client-Side Rendering",
+        definition: "A method based on loading a page with a singular bare-bones HTML file, with JavaScript handling most of the rendering through the user's browser.",
+        example: "Used in Single Page Application libraries like React and Vue. Slower initial load than server-side rendering, but faster after. SEO can take a hit."
+    },
+    {
+        cardType: "Key Term",
+        term: "Server-Side Rendering",
+        definition: "The user's browser sends a request for a new HTML file on every page load, instead of only once at the beginning like in client-side rendering.",
+        example: "The traditional way of rendering websites. Faster initial load, slower after. Good for SEO and static sites."
+    },
 ]
 
     export default keyTerms;
