@@ -23,6 +23,24 @@ const keyTerms = [
         definition: "Strings denoted with backticks (``) that allow for embedded expressions and multi-line strings.",
         example: "`My name is ${name}`"
     },
+    {
+        cardType: "Key Term",
+        term: "Ternary Operator",
+        definition: "A syntactical shortcut for an if statement.",
+        example: "condition ? expressionIfTrue : expressionIfFalse"
+    },
+    {
+        cardType: "Key Term",
+        term: "Falsy",
+        definition: "A value that is considered false in a boolean context.",
+        example: "false, 0, -0, 0n, '', null, undefined, NaN are all falsy by default."
+    },
+    {
+        cardType: "Key Term",
+        term: "Truthy",
+        definition: "A value that is considered true in a boolean context.",
+        example: "All values in JavaScript are truthy unless defined as falsy, such as null and NaN."
+    },
 ]
 
     export default keyTerms;
