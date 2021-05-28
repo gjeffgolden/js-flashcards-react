@@ -24,11 +24,11 @@ export default function Header({ allCards, htmlCards, methodCards, termCards }) 
 
     return (
         <header>
-            <nav>
-                <button onClick={handleClick}>All Cards (Shuffled)</button>
-                <button onClick={handleClick}>JavaScript Key Terms</button>
-                <button onClick={handleClick}>JavaScript Methods</button>
-                <button onClick={handleClick}>Semantic HTML</button>
+            <nav className="nav-buttons" onClick={handleClick}>
+                <button>All Cards (Shuffled)</button>
+                <button>JavaScript Key Terms</button>
+                <button>JavaScript Methods</button>
+                <button>Semantic HTML</button>
             </nav>
         </header>
     )
