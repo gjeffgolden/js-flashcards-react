@@ -10,4 +10,15 @@ I created this app to help myself and other early-career frontend developers get
 4. Nailing down concise, correct definitions and helpful examples
 
 ## Contributions and Pull Requests
-All of the data for each flash card is stored in arrays of objects, separated into files in the /assets folder. Corrections, clarifications or additions are welcome in the form of pull requests. Thank you!
+All of the data for each flash card is stored in arrays of objects, separated into files in the /assets folder. Corrections, clarifications or additions are welcome in the form of pull requests. Objects must contain the following keys:
+
+```
+   {
+        cardType: "Method",
+        term: ".substring()",
+        definition: "STRING: Returns a section of string, as sliced from index.",
+        example: "'string'.substring(0,3) => 'str' "
+    },
+```
+
+Thank you!
