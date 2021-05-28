@@ -18,15 +18,19 @@ import htmlElements from './assets/HTMLElements'
 function App() {
 
   const [flipCard, setFlipCard] = useState(true)
-  const [shownCards, setShownCards] = useState([])
+  const [shownCards, setShownCards] = useState([...keyTerms, ...prototypeMethods, ...htmlElements])
   const [currentCardIndex, setCurrentCardIndex] = useState(0)
   
   const allCards = [...keyTerms, ...prototypeMethods, ...htmlElements]
+
+  //utility function to shuffle any deck
+  const shuffleArray = (cardArray) => 
+    [...cardArray].sort(() => Math.random() - 0.5);
   
   //candidate for refactoring
   const shuffledCards = () => {
     setCurrentCardIndex(0)
-    setShownCards(allCards)
+    setShownCards(shuffleArray(allCards))
   }
 
   const methodCards = () => {

@@ -17,9 +17,6 @@ const CardContainer = ({ flipCard, shownCards, currentCardIndex }) => {
     }
 
     const displayCard = () => {
-        console.log(shownCards[currentCardIndex])
-        console.log(currentCardIndex)
-        console.log(shownCards)
         if (shownCards[currentCardIndex]) {
             if (flipCard === true) {
                 let currentCard = shownCards[currentCardIndex]
