@@ -36,19 +36,19 @@ function App() {
   const methodCards = () => {
     let filtered = allCards.filter(card => card.cardType === "Method")
     setCurrentCardIndex(0)
-    setShownCards(filtered)
+    setShownCards(shuffleArray(filtered))
   }
 
   const termCards = () => {
     let filtered = allCards.filter(card => card.cardType === "Key Term")
     setCurrentCardIndex(0)
-    setShownCards(filtered)
+    setShownCards(shuffleArray(filtered))
   }
 
   const htmlCards = () => {
     let filtered = allCards.filter(card => card.cardType === "HTML")
     setCurrentCardIndex(0)
-    setShownCards(filtered)
+    setShownCards(shuffleArray(filtered))
   }
   //end candidate for refactoring
 
@@ -76,7 +76,7 @@ function App() {
       </div>
       <figure className="flip-button" onMouseEnter={handleFlip} onMouseLeave={handleFlip}>
         <FlipCameraAndroidIcon fontSize="large" />
-        <figcaption>HOVER TO FLIP</figcaption>
+        <figcaption>FLIP</figcaption>
       </figure>
     </main>
   );
