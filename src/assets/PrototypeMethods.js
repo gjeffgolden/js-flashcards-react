@@ -13,7 +13,7 @@ const prototypeMethods = [
     },
     {
         cardType: "Method",
-        term: ".concat()",
+        term: "array.concat()",
         definition: "ARRAY: Merges two or more arrays and returns new array (non-destructive).",
         example: "[1, 2, 3].concat([4,5])) => [1, 2, 3, 4, 5]"
     },
@@ -70,6 +70,12 @@ const prototypeMethods = [
         term: ".flatMap()",
         definition: "ARRAY: Identical to calling .map() followed by .flat(). Returns a new one-dimensional array with mapped values.",
         example: "[1, 2, 3, [4, 5]].flatMap(number => number * 2) => [2, 4, 6, 8, 10]"
+    },
+    {
+        cardType: "Method",
+        term: ".repeat()",
+        definition: "STRING: Repeats a string x amount of times, with x as the argument.",
+        example: "'example'.repeat(3) => 'exampleexampleexample'"
     },
 ]
 
