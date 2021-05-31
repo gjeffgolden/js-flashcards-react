@@ -53,6 +53,66 @@ const keyTerms = [
         definition: "The user's browser sends a request for a new HTML file on every page load, instead of only once at the beginning like in client-side rendering.",
         example: "The traditional way of rendering websites. Faster initial load, slower after. Good for SEO and static sites."
     },
+    {
+        cardType: "Key Term",
+        term: "Const vs. Let",
+        definition: "Let variables can be reassigned but not redeclared; const variables can't be reassigned or redeclared.",
+        example: "Both are block scoped and recommended in place of var as of ES6(2015)."
+    },
+    {
+        cardType: "Key Term",
+        term: "event.target() vs. event.currentTarget()",
+        definition: "event.target() = HTML element where action (i.e. click) took place; event.currentTarget() = HTML element with event listener.",
+        example: "Think event delegation! If an event listener is on a parent div and a user clicks on a child button, the currentTarget is the div and the target is the button."
+    },
+    {
+        cardType: "Key Term",
+        term: "Callback Function",
+        definition: "Function executed after another function is called. Can be passed as param to other functions, allowing synchronous execution.",
+        example: "const myCallback = (() => {this is the callback function}) => {do stuff}"
+    },
+    {
+        cardType: "Key Term",
+        term: "Unary Plus (+)",
+        definition: "Preceding an operand, converts that operand to number data type.",
+        example: "+'1' => 1"
+    },
+    {
+        cardType: "Key Term",
+        term: "Pure Function",
+        definition: "A function that will always return the same output given the same input. No side effects or reliance on third-party data.",
+        example: "const pureFunction = (a, b) => return a + b"
+    },
+    {
+        cardType: "Key Term",
+        term: "Destructuring",
+        definition: "Breaking down an object to allow easier access to inner properties.",
+        example: "const person = {name: 'Jessica', age: 29}; let { name, age} = person; console.log(name) => 'Jessica'"
+    },
+    {
+        cardType: "Key Term",
+        term: "Closure",
+        definition: "An inner function has access to variables and params of outer function.",
+        example: "Inner scope 'remembers' outer scope and associated data."
+    },
+    {
+        cardType: "Key Term",
+        term: "Undefined vs. null",
+        definition: "Null is an assigned, intentionally placed lack of value, while undefined is an unassigned variable or a function that doesn't return a value.",
+        example: "let example1; => undefined ... let example2 = null => null"
+    },
+    {
+        cardType: "Key Term",
+        term: "Async/await",
+        definition: "Tells the program to stop and wait until something is resolved, such as a fetch call.",
+        example: "const getUsers = async () => {const response = await fetch('url')}"
+    },
+    {
+        cardType: "Key Term",
+        term: "Static Generation (SSG)",
+        definition: "Pre-rendering method that generates HTML at build time, instead of on each server request.",
+        example: "Use if page can be preloaded without user input."
+    },
 ]
 
     export default keyTerms;
