@@ -77,6 +77,24 @@ const prototypeMethods = [
         definition: "STRING: Repeats a string x amount of times, with x as the argument.",
         example: "'example'.repeat(3) => 'exampleexampleexample'"
     },
+    {
+        cardType: "Method",
+        term: ".sort()",
+        definition: "ARRAY: Sorts indexes in an array, using a function as an argument to define condition.",
+        example: "[2, 8, 1].sort((a, b) => a - b) => [1, 2, 8]"
+    },
+    {
+        cardType: "Method",
+        term: ".splice()",
+        definition: "ARRAY: Changes contents of original array by removing or replacing items (destructive). Args = (startIndex, numberOfItemsToDelete, itemToAdd, ItemToAdd2++)",
+        example: "['Cat', 'Dog', 'Horse'].splice(1, 0, 'Rabbit') => ['Cat', 'Rabbit', 'Dog', 'Horse']"
+    },
+    {
+        cardType: "Method",
+        term: ".reduce()",
+        definition: "ARRAY: Distills all elements in an array to a single output value, using a reducer function.",
+        example: "[1, 2, 3].reduce((accumulator, currentValue) => accumulator + currentValue) => 6"
+    },
 ]
 
 export default prototypeMethods;
