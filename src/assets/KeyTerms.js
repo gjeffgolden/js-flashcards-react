@@ -87,7 +87,7 @@ const keyTerms = [
         cardType: "Key Term",
         term: "Destructuring",
         definition: "Breaking down an object to allow easier access to inner properties.",
-        example: "const person = {name: 'Jessica', age: 29}; let { name, age} = person; console.log(name) => 'Jessica'"
+        example: "const person = {name: 'Jessica', age: 29}; let { name, age } = person; console.log(name) => 'Jessica'"
     },
     {
         cardType: "Key Term",
@@ -97,9 +97,9 @@ const keyTerms = [
     },
     {
         cardType: "Key Term",
-        term: "Undefined vs. null",
+        term: "Undefined vs. Null",
         definition: "Null is an assigned, intentionally placed lack of value, while undefined is an unassigned variable or a function that doesn't return a value.",
-        example: "let example1; => undefined ... let example2 = null => null"
+        example: "let example1; => undefined // let example2 = null => null"
     },
     {
         cardType: "Key Term",
