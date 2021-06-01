@@ -1,34 +1,14 @@
 import React from 'react'
 
-export default function Header({ allCards, htmlCards, methodCards, termCards }) {
-
-    const handleClick = (event) => {
-        switch (event.target.innerText) {
-            case "All Cards (Shuffled)":
-                allCards()
-                break;
-            case "JavaScript Key Terms":
-                termCards()
-                break;
-            case "JavaScript Methods":
-                methodCards()
-                break;
-            case "Semantic HTML":
-                htmlCards()
-                break;
-            default:
-                allCards()
-                break;
-        }
-    }
+export default function Header({ handleSelectCardType }) {
 
     return (
         <header>
-            <nav className="nav-buttons" onClick={handleClick}>
-                <button>All Cards (Shuffled)</button>
-                <button>JavaScript Key Terms</button>
-                <button>JavaScript Methods</button>
-                <button>Semantic HTML</button>
+            <nav className="nav-buttons">
+                <button onClick={handleSelectCardType}>All Cards (Shuffled)</button>
+                <button onClick={handleSelectCardType}>JavaScript Key Terms</button>
+                <button onClick={handleSelectCardType}>JavaScript Methods</button>
+                <button onClick={handleSelectCardType}>Semantic HTML</button>
             </nav>
         </header>
     )

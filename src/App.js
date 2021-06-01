@@ -6,9 +6,10 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 import FlipCameraAndroidIcon from '@material-ui/icons/FlipCameraAndroid'
 
-//containers and components
+//containers, components, utilities
 import CardContainer from './containers/CardContainer'
 import Header from  './components/Header'
+import { shuffleArray } from './utils/utils'
 
 //card object arrays
 import keyTerms from './assets/KeyTerms'
@@ -17,40 +18,22 @@ import htmlElements from './assets/HTMLElements'
 
 function App() {
 
+  const allCards = [...keyTerms, ...prototypeMethods, ...htmlElements]
+  
   const [flipCard, setFlipCard] = useState(true)
-  const [shownCards, setShownCards] = useState([...keyTerms, ...prototypeMethods, ...htmlElements])
+  const [shownCards, setShownCards] = useState(allCards)
   const [currentCardIndex, setCurrentCardIndex] = useState(0)
   
-  const allCards = [...keyTerms, ...prototypeMethods, ...htmlElements]
-
-  //utility function to shuffle any deck
-  const shuffleArray = (cardArray) => 
-    [...cardArray].sort(() => Math.random() - 0.5);
-  
-  //candidate for refactoring
-  const shuffledCards = () => {
-    setCurrentCardIndex(0)
-    setShownCards(shuffleArray(allCards))
+  const handleSelectCardType = (event) => {
+    if (event.target.innerText === "All Cards (Shuffled)") {
+      setCurrentCardIndex(0)
+      setShownCards(shuffleArray(allCards))
+    } else {
+      let filtered = allCards.filter(card => card.cardType === event.target.innerText)
+      setCurrentCardIndex(0)
+      setShownCards(shuffleArray(filtered))
+    }
   }
-
-  const methodCards = () => {
-    let filtered = allCards.filter(card => card.cardType === "Method")
-    setCurrentCardIndex(0)
-    setShownCards(shuffleArray(filtered))
-  }
-
-  const termCards = () => {
-    let filtered = allCards.filter(card => card.cardType === "Key Term")
-    setCurrentCardIndex(0)
-    setShownCards(shuffleArray(filtered))
-  }
-
-  const htmlCards = () => {
-    let filtered = allCards.filter(card => card.cardType === "HTML")
-    setCurrentCardIndex(0)
-    setShownCards(shuffleArray(filtered))
-  }
-  //end candidate for refactoring
 
   const nextCard = () => {
     let nextIndex = currentCardIndex + 1 === shownCards.length ? 0 : currentCardIndex + 1
@@ -68,7 +51,7 @@ function App() {
 
   return (
     <main className="App">
-      <Header allCards={shuffledCards} methodCards={methodCards} htmlCards={htmlCards} termCards={termCards} />
+      <Header handleSelectCardType={handleSelectCardType} />
       <div className="main-container">
         <ArrowBackIosIcon className="arrow-button" fontSize="large" onClick={previousCard} />
         <CardContainer flipCard={flipCard} shownCards={shownCards} currentCardIndex={currentCardIndex} />

@@ -6,11 +6,11 @@ const CardContainer = ({ flipCard, shownCards, currentCardIndex }) => {
     //try a switch statement when refactoring
     const assignClass = () => {
         if (shownCards[currentCardIndex] !== undefined) {
-            if (shownCards[currentCardIndex].cardType === "Key Term") {
+            if (shownCards[currentCardIndex].cardType === "JavaScript Key Terms") {
                 return "term-card-container"
-            } else if (shownCards[currentCardIndex].cardType === "Method") {
+            } else if (shownCards[currentCardIndex].cardType === "JavaScript Methods") {
                 return "method-card-container"
-            } else if (shownCards[currentCardIndex].cardType === "HTML") {
+            } else if (shownCards[currentCardIndex].cardType === "Semantic HTML") {
                 return "html-card-container"
             }
         }
