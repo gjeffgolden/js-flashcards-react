@@ -21,7 +21,7 @@ const keyTerms = [
         cardType: "JavaScript Key Terms",
         term: "Template Literal",
         definition: "Strings denoted with backticks (``) that allow for embedded expressions and multi-line strings.",
-        example: "`My name is ${name}`"
+        example: "`This string is in backtacks.`"
     },
     {
         cardType: "JavaScript Key Terms",

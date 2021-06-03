@@ -16,20 +16,25 @@
 .main-container {
   text-align: center;
   height: 50%;
-  width: auto;
+  width: 90%;
   background-color: white;
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
 }
 
 .term-card-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
-  height: 300px;
+  width: 60%;
+  height: 80%;
+  max-width: 600px;
+  min-width: 200px;
+  min-height: 100px;
+  max-height: 300px;
   background-color: orange;
   box-shadow: 5px 5px 10px gray;
 }
@@ -38,8 +43,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
-  height: 300px;
+  width: 60%;
+  height: 80%;
+  max-width: 600px;
+  min-width: 200px;
+  min-height: 100px;
+  max-height: 300px;
   background-color: hotpink;
   box-shadow: 5px 5px 10px gray;
 }
@@ -48,8 +57,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
-  height: 300px;
+  width: 60%;
+  height: 80%;
+  max-width: 600px;
+  min-width: 200px;
+  min-height: 100px;
+  max-height: 300px;
   background-color: rgb(177, 177, 43);
   box-shadow: 5px 5px 10px gray;
 }
@@ -76,6 +89,12 @@
   padding: 3rem;
 }
 
+.nav-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 .nav-buttons button {
   font-family: 'Nanum Gothic Coding', monospace;
   font-weight: 700;
@@ -94,4 +113,6 @@ figcaption {
   font-weight: 700;
   font-size: 1.5rem;
 }
+
+/* media queries */
 
