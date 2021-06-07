@@ -101,6 +101,30 @@ const prototypeMethods = [
         definition: "ARRAY: Flips the order of indexes in an array and returns same array (destructive).",
         example: "[1, 2, 3].reverse() => [3, 2, 1]"
     },
+    {
+        cardType: "JavaScript Methods",
+        term: ".shift()",
+        definition: "ARRAY: Removes the FIRST index from an array and returns it, altering the length of the original array (destructive).",
+        example: "[1, 2, 3].shift() => 1"
+    },
+    {
+        cardType: "JavaScript Methods",
+        term: ".pop()",
+        definition: "ARRAY: Removes the LAST index from an array and returns it, altering the length of the original array (destructive).",
+        example: "[1, 2, 3].shift() => 3"
+    },
+    {
+        cardType: "JavaScript Methods",
+        term: ".unshift()",
+        definition: "ARRAY: Adds one or more elements to the START of an array and alters the length of the original array (destructive).",
+        example: "[1, 2, 3].unshift(10, 11) => [10, 11, 1, 2, 3]"
+    },
+    {
+        cardType: "JavaScript Methods",
+        term: ".push()",
+        definition: "ARRAY: Adds one or more elements to the END of an array and alters the length of the original array (destructive).",
+        example: "[1, 2, 3].unshift(10, 11) => [1, 2, 3, 10, 11]"
+    },
 ]
 
 export default prototypeMethods;
