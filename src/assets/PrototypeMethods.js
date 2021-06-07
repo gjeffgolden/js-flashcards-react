@@ -95,6 +95,12 @@ const prototypeMethods = [
         definition: "ARRAY: Distills all elements in an array to a single output value, using a reducer function.",
         example: "[1, 2, 3].reduce((accumulator, currentValue) => accumulator + currentValue) => 6"
     },
+    {
+        cardType: "JavaScript Methods",
+        term: ".reverse()",
+        definition: "ARRAY: Flips the order of indexes in an array and returns same array (destructive).",
+        example: "[1, 2, 3].reverse() => [3, 2, 1]"
+    },
 ]
 
 export default prototypeMethods;
