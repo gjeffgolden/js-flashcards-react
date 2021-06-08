@@ -126,6 +126,9 @@ figcaption {
     width: 18.75rem;
     height: 9.375rem;
   }
+  .card h1 {
+    font-size: 1.75rem;
+  }
   .card h2 {
     font-size: 0.75rem;
   }

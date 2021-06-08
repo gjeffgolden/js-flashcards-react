@@ -103,7 +103,7 @@ const keyTerms = [
     },
     {
         cardType: "JavaScript Key Terms",
-        term: "Undefined vs. Null",
+        term: "Undefined",
         definition: "An unassigned variable or a function that doesn't return a value.",
         example: "let example; console.log(example) => undefined"
     },
