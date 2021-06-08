@@ -44,13 +44,13 @@ const keyTerms = [
     {
         cardType: "JavaScript Key Terms",
         term: "Client-Side Rendering",
-        definition: "A method based on loading a page with a singular bare-bones HTML file, with JavaScript handling most of the rendering through the user's browser.",
-        example: "Used in Single Page Application libraries like React and Vue. Slower initial load than server-side rendering, but faster after. SEO can take a hit."
+        definition: "Page loads with a singular bare-bones HTML file, with JavaScript handling most of the rendering through the user's browser.",
+        example: "Slower initial load than server-side rendering, but faster after. SEO can take a hit."
     },
     {
         cardType: "JavaScript Key Terms",
         term: "Server-Side Rendering",
-        definition: "The user's browser sends a request for a new HTML file on every page load, instead of only once at the beginning like in client-side rendering.",
+        definition: "The user's browser sends a request for a new HTML file on every page load.",
         example: "The traditional way of rendering websites. Faster initial load, slower after. Good for SEO and static sites."
     },
     {
@@ -74,8 +74,8 @@ const keyTerms = [
     {
         cardType: "JavaScript Key Terms",
         term: "Callback Function",
-        definition: "Function executed after another function is called. Can be passed as param to other functions, allowing synchronous execution.",
-        example: "const myCallback = (() => {this is the callback function}) => {do stuff}"
+        definition: "Function executed after another function is called. Can be passed as param to other functions.",
+        example: "const example = () => callbackFunction()"
     },
     {
         cardType: "JavaScript Key Terms",
@@ -86,7 +86,7 @@ const keyTerms = [
     {
         cardType: "JavaScript Key Terms",
         term: "Pure Function",
-        definition: "A function that will always return the same output given the same input. No side effects or reliance on third-party data.",
+        definition: "A function that will always return the same output given the same input. No side effects.",
         example: "const pureFunction = (a, b) => return a + b"
     },
     {
@@ -104,8 +104,14 @@ const keyTerms = [
     {
         cardType: "JavaScript Key Terms",
         term: "Undefined vs. Null",
-        definition: "Null is an assigned, intentionally placed lack of value, while undefined is an unassigned variable or a function that doesn't return a value.",
-        example: "let example1; => undefined // let example2 = null => null"
+        definition: "An unassigned variable or a function that doesn't return a value.",
+        example: "let example; console.log(example) => undefined"
+    },
+    {
+        cardType: "JavaScript Key Terms",
+        term: "Null",
+        definition: "An assigned, intentionally placed lack of value.",
+        example: "let example = null; => null"
     },
     {
         cardType: "JavaScript Key Terms",

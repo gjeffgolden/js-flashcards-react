@@ -20,7 +20,7 @@ const prototypeMethods = [
     {
         cardType: "JavaScript Methods",
         term: ".copyWithin()",
-        definition: "ARRAY: Copies part of an array and pastes it to another location in same array without modifying its length (destructive). Three params: (target, start index, end index).",
+        definition: "ARRAY: Copies part of an array and pastes it to another location in same array without modifying its length (destructive).",
         example: "[1, 2, 3].copyWithin(0, 1, 2)) => [2, 2, 3]"
     },
     {
@@ -38,25 +38,25 @@ const prototypeMethods = [
     {
         cardType: "JavaScript Methods",
         term: ".fill()",
-        definition: "ARRAY: Changes all elements in an array to a static value from a start index to an end index, returning modified array (destructive).",
+        definition: "ARRAY: Changes all elements in an array to a static value from a start index to an end index (destructive).",
         example: "[1, 2, 3, 4].fill(0, 1, 2) => [1, 0, 0, 4]"
     },
     {
         cardType: "JavaScript Methods",
         term: ".filter()",
-        definition: "ARRAY: Checks every element in an array and creates a new array with only elements that pass a certain condition (non-destructive).",
+        definition: "ARRAY: Checks every element and returns a new array with only elements that pass a certain condition (non-destructive).",
         example: "[1, 2, 3, 4].filter(number => number >= 3) => [3, 4]"
     },
     {
         cardType: "JavaScript Methods",
         term: ".find()",
-        definition: "ARRAY: Returns the value of the first element in an array that matches a certain condition. If nothing meets the condition, returns undefined.",
+        definition: "ARRAY: Returns the value of the first element in an array that matches a certain condition. If nothing, returns undefined.",
         example: "[1, 2, 3, 4].find(number => number === 3) => 3"
     },
     {
         cardType: "JavaScript Methods",
         term: ".findIndex()",
-        definition: "ARRAY: Returns the index of the first element in an array that matches a certain condition. If nothing meets the condition, returns -1.",
+        definition: "ARRAY: Returns the index of the first element in an array that matches a certain condition. If nothing, returns -1.",
         example: "[1, 2, 3, 4].findIndex(number => number === 3) => 2"
     },
     {
@@ -86,7 +86,7 @@ const prototypeMethods = [
     {
         cardType: "JavaScript Methods",
         term: ".splice()",
-        definition: "ARRAY: Changes contents of original array by removing or replacing items (destructive). Args = (startIndex, numberOfItemsToDelete, itemToAdd, ItemToAdd2++)",
+        definition: "ARRAY: Changes contents of original array by removing or replacing items (destructive).",
         example: "['Cat', 'Dog', 'Horse'].splice(1, 0, 'Rabbit') => ['Cat', 'Rabbit', 'Dog', 'Horse']"
     },
     {
@@ -104,25 +104,25 @@ const prototypeMethods = [
     {
         cardType: "JavaScript Methods",
         term: ".shift()",
-        definition: "ARRAY: Removes the FIRST index from an array and returns it, altering the length of the original array (destructive).",
+        definition: "ARRAY: Removes the FIRST index from an array and returns it, altering the original array (destructive).",
         example: "[1, 2, 3].shift() => 1"
     },
     {
         cardType: "JavaScript Methods",
         term: ".pop()",
-        definition: "ARRAY: Removes the LAST index from an array and returns it, altering the length of the original array (destructive).",
+        definition: "ARRAY: Removes the LAST index from an array and returns it, altering the original array (destructive).",
         example: "[1, 2, 3].shift() => 3"
     },
     {
         cardType: "JavaScript Methods",
         term: ".unshift()",
-        definition: "ARRAY: Adds one or more elements to the START of an array and alters the length of the original array (destructive).",
+        definition: "ARRAY: Adds one or more elements to the START of an array and alters the original array (destructive).",
         example: "[1, 2, 3].unshift(10, 11) => [10, 11, 1, 2, 3]"
     },
     {
         cardType: "JavaScript Methods",
         term: ".push()",
-        definition: "ARRAY: Adds one or more elements to the END of an array and alters the length of the original array (destructive).",
+        definition: "ARRAY: Adds one or more elements to the END of an array and alters the original array (destructive).",
         example: "[1, 2, 3].unshift(10, 11) => [1, 2, 3, 10, 11]"
     },
 ]
