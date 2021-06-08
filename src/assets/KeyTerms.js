@@ -109,7 +109,7 @@ const keyTerms = [
     },
     {
         cardType: "JavaScript Key Terms",
-        term: "Async/await",
+        term: "Async/Await",
         definition: "Tells the program to stop and wait until something is resolved, such as a fetch call.",
         example: "const getUsers = async () => {const response = await fetch('url')}"
     },

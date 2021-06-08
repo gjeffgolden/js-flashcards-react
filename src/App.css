@@ -40,12 +40,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 80%;
-  max-width: 600px;
-  min-width: 200px;
-  min-height: 100px;
-  max-height: 300px;
+  width: 25rem;
+  height: 12.5rem;
   background-color: hotpink;
   box-shadow: 5px 5px 10px gray;
 }
@@ -54,12 +50,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 80%;
-  max-width: 600px;
-  min-width: 200px;
-  min-height: 100px;
-  max-height: 300px;
+  width: 25rem;
+  height: 12.5rem;
   background-color: rgb(177, 177, 43);
   box-shadow: 5px 5px 10px gray;
 }
@@ -126,10 +118,63 @@ figcaption {
     width: 18.75rem;
     height: 9.375rem;
   }
+  .html-card-container {
+    width: 18.75rem;
+    height: 9.375rem;
+  }
+  .method-card-container {
+    width: 18.75rem;
+    height: 9.375rem;
+  }
   .card h2 {
     font-size: 0.75rem;
   }
   .card h4 {
     font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .term-card-container {
+    width: 15rem;
+    height: 7.5rem;
+  }
+  .html-card-container {
+    width: 15rem;
+    height: 7.5rem;
+  }
+  .method-card-container {
+    width: 15rem;
+    height: 7.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .App {
+    padding-top: 2rem;
+  }
+  .term-card-container {
+    min-width: 14rem;
+    min-height: 7rem;
+  }
+  .method-card-container {
+    min-width: 14rem;
+    min-height: 7rem;
+  }
+  .html-card-container {
+    min-width: 14rem;
+    min-height: 7rem;
+  }
+  .main-container {
+    width: 300px;
+  }
+  .nav-buttons {
+    flex-flow: column;
+  }
+  .arrow-button {
+    padding: 1rem;
+  }
+  .card h1 {
+    font-size: 1.25rem;
   }
 }
