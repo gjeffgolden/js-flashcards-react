@@ -61,9 +61,15 @@ const keyTerms = [
     },
     {
         cardType: "JavaScript Key Terms",
-        term: "event.target() vs. event.currentTarget()",
-        definition: "event.target() = HTML element where action (i.e. click) took place; event.currentTarget() = HTML element with event listener.",
-        example: "Think event delegation! If an event listener is on a parent div and a user clicks on a child button, the currentTarget is the div and the target is the button."
+        term: "event.target()",
+        definition: "HTML element where action (i.e. click) took place.",
+        example: "If you click on a button, that element is the target."
+    },
+    {
+        cardType: "JavaScript Key Terms",
+        term: "event.currentTarget()",
+        definition: "HTML element with attached event listener, regardless if action took place on a child.",
+        example: "If an event listener is on a parent div and a user clicks on a child button, the currentTarget is the div."
     },
     {
         cardType: "JavaScript Key Terms",

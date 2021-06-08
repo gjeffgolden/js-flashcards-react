@@ -4,13 +4,14 @@
 .App {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  height: 100vh;
-  width: auto;
+  height: 100%;
+  width: 100%;
   background-color: white;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  padding-top: 8rem;
 }
 
 .main-container {
@@ -22,19 +23,15 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 2.5rem;
 }
 
 .term-card-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 80%;
-  max-width: 600px;
-  min-width: 200px;
-  min-height: 100px;
-  max-height: 300px;
+  width: 25rem;
+  height: 12.5rem;
   background-color: orange;
   box-shadow: 5px 5px 10px gray;
 }
@@ -76,7 +73,15 @@
 }
 
 .card h1 {
-  font-size: 3rem;
+  font-size: 2em;
+}
+
+.card h2 {
+  font-size: 1em;
+}
+
+.card h4 {
+  font-size: 0.75em;
 }
 
 .flip-button {
@@ -116,3 +121,15 @@ figcaption {
 
 /* media queries */
 
+@media only screen and (max-width: 800px) {
+  .term-card-container {
+    width: 18.75rem;
+    height: 9.375rem;
+  }
+  .card h2 {
+    font-size: 0.75rem;
+  }
+  .card h4 {
+    font-size: 0.5rem;
+  }
+}
